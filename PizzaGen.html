@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Pizza Generator</title>
+    <style>
+        .center {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+        }
+        #code {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+    <span id="code">87459</span><br>
+  
+</div>
+<script>
+    let code = Math.floor(Math.random() * 33334) * 3 + "";
+    while (code.length < 5) {
+        code = "0" + code;
+    }
+    document.querySelector("#code").innerHTML = code;
+</script>
+
+</body></html>
